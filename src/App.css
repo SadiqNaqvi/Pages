@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background-color: #23272f;
+  height: 100dvh;
+  width: 100vw;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.appLogo img{
+  user-select: none;
+}

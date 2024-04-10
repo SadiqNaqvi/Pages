@@ -1,0 +1,1012 @@
+h1,
+h3,
+#appName,
+#notesHead,
+#innerContFooter p,
+#NTNotesName,
+#NPNoteName,
+#NPBody,
+.wordCounter,
+#notificationBox p,
+#userName,
+#userEmail,
+#totalNotes,
+#logout,
+.listDD {
+    user-select: none;
+    font-family: 'Raleway', system-ui, 'Segoe UI', sans-serif;
+    font-weight: 300;
+}
+
+.disNone {
+    display: none !important;
+}
+
+.hideAddBtn {
+    transform: translateX(100px) !important;
+}
+
+#Pages {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#Pages::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../Images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    filter: brightness(0.4);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#newNoteCont,
+#notePage,
+#container {
+    height: 95%;
+    width: 95%;
+    z-index: 1;
+}
+
+#headerCont {
+    height: 15%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+#cont {
+    width: 98%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#appInfo {
+    display: flex;
+    align-items: center;
+}
+
+.appLogo {
+    margin: 10px;
+}
+
+.appLogo img {
+    height: 40px;
+    user-select: none;
+}
+
+#appName {
+    font-size: 32px;
+    color: ghostwhite;
+    margin-left: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.205);
+    cursor: pointer;
+    transition: transform 50ms ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.24);
+    box-shadow: 0px 0px 20px ghostwhite;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+#headerOptions {
+    display: flex;
+}
+
+#addNote svg {
+    height: 30px;
+    aspect-ratio: 1;
+    color: ghostwhite;
+}
+
+#userInfo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    margin: 0 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#userInfo img {
+    height: inherit;
+    user-select: none;
+}
+
+#userInfo:hover {
+    box-shadow: 0px 0px 20px ghostwhite;
+}
+
+#userOption {
+    background-color: ghostwhite;
+    padding: 15px 0;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#userName,
+#userEmail,
+#totalNotes,
+#logout {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+#totalNotes {
+    padding: 10px 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#logout {
+    background-color: #ff2e2e;
+    color: ghostwhite;
+    border-radius: 8px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#logout:hover {
+    background-color: #ff4141;
+}
+
+#bodyCont {
+    width: 100%;
+    height: 85%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contFooter {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#innerContFooter {
+    height: 90%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#innerContFooter p {
+    color: ghostwhite;
+}
+
+#innerContFooter p a {
+    color: ghostwhite;
+}
+
+#floatingAddBtn {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    transition: transform 500ms ease;
+    background-color: rgba(184, 255, 184, 0.9);
+    display: none;
+}
+
+#floatingAddBtn svg {
+    height: 36px;
+}
+
+#neckCont {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.199);
+    padding: 10px 0px;
+    z-index: 1;
+}
+
+#notesHead {
+    font-size: 26px;
+    color: ghostwhite;
+    margin-left: 20px;
+}
+
+#bodyHeadOptions {
+    padding: 10px;
+}
+
+#bodyHeadOptions svg {
+    height: 18px;
+    aspect-ratio: 1;
+    color: ghostwhite;
+}
+
+#listDropdown {
+    background-color: ghostwhite;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 40px;
+    top: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.listDD {
+    width: 150px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.listDD:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+#listDropdown svg,
+#listDropdown span {
+    height: 20px;
+    font-size: 26px;
+    margin-right: 10px;
+    line-height: 0.7;
+}
+
+#list-archive,
+#list-default {
+    padding-left: 13px;
+    padding-right: 17px;
+}
+
+
+#notesCont,
+#noteTilesCont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#createNotesCont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: ghostwhite;
+}
+
+#createNotesCont svg {
+    height: 200px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+#createNotesCont h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+#createNotesCont h3 svg {
+    padding: 0;
+    border: 0;
+    height: 40px;
+    margin-bottom: 0;
+    transform: translateY(10px);
+    cursor: default;
+}
+
+#noteTile {
+    width: 95%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 239, 213, 0.5);
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: transform 100ms ease;
+}
+
+#noteTile:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.01);
+}
+
+#noteTile:active {
+    transform: scale(1);
+}
+
+#NTLeftSide {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#NTNotesName {
+    color: ghostwhite;
+    font-size: 18px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 2px solid ghostwhite;
+    max-width: 80%;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#NTNoteOptions {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    margin-left: 0;
+}
+
+#NTNoteOptions div {
+    display: flex;
+    margin: 0 10px;
+}
+
+#NTNoteOptions div:nth-child(3) {
+    margin-right: 0;
+}
+
+#NTNoteOptions div:nth-child(1) {
+    margin-left: 0;
+}
+
+#NTNoteOptions svg {
+    height: 25px;
+    cursor: pointer;
+}
+
+#NTLikeNote svg {
+    color: hotpink;
+    transition: transform 150ms ease;
+}
+
+#NTLikeNote svg:active {
+    transform: scale(0.1);
+}
+
+#NTDeleteNote svg {
+    color: rgb(255, 100, 100);
+}
+
+#NTArchiveNote svg {
+    color: rgb(100, 149, 255);
+}
+
+#NTNoteOptions svg:hover {
+    animation: notesvgani 400ms ease;
+}
+
+@keyframes notesvgani {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(30deg);
+    }
+
+    66% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#newNoteCont,
+#notePage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 200ms ease;
+}
+
+#NNHeader,
+#NPHeader {
+    height: 12%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#NPHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#NNLeftSide,
+#NPLeftSide {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#NNLeftSide {
+    width: 80%;
+}
+
+#appLogo {
+    margin-left: 0;
+}
+
+#NPLeftSide {
+    width: 60%;
+}
+
+#NPRightSide {
+    display: flex;
+}
+
+#NNBody,
+#NPBody {
+    width: 100%;
+    height: 76%;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#NNFooter,
+#NPFooter {
+    width: 100%;
+    height: 12%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#noteNameInput {
+    padding: 8px 20px;
+    font-size: 20px;
+    margin-left: 20px;
+    border-radius: 50px;
+    width: 50%;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.2);
+    transition: width 200ms ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: ghostwhite;
+}
+
+#noteNameInput:hover {
+    background-color: ghostwhite;
+    color: black;
+}
+
+#noteNameInput::placeholder {
+    color: rgb(221, 221, 221);
+}
+
+#noteNameInput:hover::placeholder,
+#noteNameInput:focus::placeholder {
+    color: rgb(88, 88, 88);
+}
+
+#noteNameInput:focus {
+    color: black;
+    width: 100%;
+    background-color: ghostwhite;
+}
+
+.icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 20px;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    cursor: pointer;
+    transition: transform 00ms ease;
+    color: rgb(255, 255, 255);
+}
+
+.icon svg {
+    height: 24px;
+}
+
+#copyNote:hover {
+    background-color: ghostwhite;
+    color: rgb(132, 0, 255);
+    box-shadow: 0 0 20px rgb(247, 0, 255);
+}
+
+#closeNewNote:hover,
+#closeNote:hover {
+    background-color: ghostwhite;
+    color: red;
+    box-shadow: 0px 0px 20px rgb(255, 0, 0);
+}
+
+#closeNewNote,
+#closeNote {
+    padding: 4px 5px;
+    padding-bottom: 2px;
+}
+
+#closeNewNote svg,
+#closeNote svg {
+    height: 30px;
+}
+
+#editNote:hover {
+    background-color: ghostwhite;
+    color: rgb(0, 170, 9);
+    box-shadow: 0 0 20px rgb(0, 255, 34);
+}
+
+.icon:active {
+    transform: scale(0.9);
+}
+
+#newNoteInput {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    background-color: transparent;
+    color: ghostwhite;
+}
+
+#newNoteInput::placeholder {
+    color: rgb(221, 221, 221);
+}
+
+#newNoteInput::selection {
+    background-color: rgb(187, 239, 255);
+    color: black;
+}
+
+#saveNewInput {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(184, 255, 184, 0.932);
+    border: none;
+    margin-right: 20px;
+    color: green;
+}
+
+#saveNewInput:hover {
+    box-shadow: 0px 0px 20px rgb(0, 255, 0);
+}
+
+.wordCounter {
+    font-size: 20px;
+    color: ghostwhite;
+    margin-left: 20px;
+}
+
+.wordBox {
+    margin-left: 40px;
+}
+
+#NPNoteName {
+    margin-left: 20px;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: ghostwhite;
+    font-size: 22px;
+    min-width: 250px;
+    border-radius: 30px;
+    max-width: 500px;
+    max-height: 42px;
+    overflow: hidden;
+}
+
+#NPBody {
+    padding: 20px;
+    font-size: 20px;
+    color: ghostwhite;
+    overflow-y: auto;
+    user-select: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-x: hidden;
+}
+
+#NPBody::selection {
+    background-color: rgb(174, 246, 255);
+    color: black;
+}
+
+#notificationBox {
+    height: 50px;
+    background-color: ghostwhite;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 500ms ease;
+    opacity: 0;
+}
+
+#notificationBox svg {
+    height: 25px;
+    margin-left: 10px;
+}
+
+#notificationBox p {
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.op1 {
+    opacity: 1 !important;
+}
+
+@media only screen and (max-width: 900px) {
+
+    icon {
+        margin-right: 12px;
+    }
+
+    icon svg {
+        height: 26px;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    #NTLeftSide {
+        max-width: 75%;
+    }
+}
+
+@media only screen and (max-width: 615px) {
+    #NTLeftSide {
+        max-width: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .appLogo img {
+        height: 35px;
+    }
+
+    #appName {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    #addNote {
+        padding: 2px;
+    }
+
+    #addNote svg {
+        height: 35px;
+    }
+
+    #userInfo {
+        height: 40px;
+        width: 40px;
+        user-select: none;
+    }
+
+    #notesHead {
+        font-size: 22px;
+    }
+
+    #bodyHeadOptions svg {
+        height: 20px;
+    }
+
+    #NTNotesName {
+        font-size: 18px;
+    }
+
+    #NTNoteOptions svg {
+        height: 22px;
+    }
+
+    #noteTile {
+        width: 95%;
+        height: 45px;
+    }
+
+    #createNotesCont svg {
+        height: 150px;
+    }
+
+    #createNotesCont h3 {
+        font-size: 20px;
+    }
+
+    #createNotesCont h3 svg {
+        height: 35px;
+    }
+
+    .icon svg,
+    .icon span {
+        height: 22px;
+        font-size: 22px;
+    }
+
+    #NNLeftSide {
+        margin-left: 0;
+    }
+
+    #noteNameInput {
+        padding: 5px 15px;
+        font-size: 18px;
+        margin-left: 10px;
+        height: 40px;
+    }
+
+    #newNoteInput {
+        font-size: 18px;
+    }
+
+    #NPNoteName {
+        max-width: 300px;
+        max-height: 35px;
+        font-size: 20px;
+        padding: 10px 15px;
+        padding-top: 6px;
+    }
+
+    #NPLeftSide {
+        margin-left: 0;
+    }
+
+    #notificationBox {
+        width: 400px;
+    }
+
+    #notificationBox p {
+        font-size: 16px;
+        width: 85%;
+    }
+
+    #notificationBox svg {
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #headerCont {
+        height: 12%;
+    }
+
+    #bodyCont {
+        height: 88%;
+    }
+
+    #NTNoteOptions {
+        margin-right: 5px;
+    }
+
+    #NTNoteOptions svg {
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #addNote {
+        display: none;
+    }
+
+    #floatingAddBtn {
+        display: flex;
+    }
+
+    #userInfo {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    #appName {
+        font-size: 22px;
+    }
+
+    #notesHead {
+        font-size: 20px;
+    }
+
+    #notificationBox p {
+        font-size: 14px;
+    }
+
+    #notificationBox svg {
+        height: 18px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .appLogo {
+        margin-left: 10px !important;
+    }
+
+    .appLogo img {
+        height: 35px;
+    }
+
+    #appName {
+        font-size: 20px;
+    }
+
+    #addNote svg {
+        height: 25px;
+    }
+
+    #floatingAddBtn svg {
+        height: 30px;
+    }
+
+    #notesHead {
+        font-size: 18px;
+    }
+
+    #bodyHeadOptions svg {
+        height: 15px;
+    }
+
+    #userInfo {
+        height: 35px;
+        width: 35px;
+    }
+
+    #createNotesCont svg {
+        height: 120px;
+    }
+
+    #createNotesCont h3 {
+        font-size: 16px;
+    }
+
+    #createNotesCont h3 svg {
+        height: 30px;
+    }
+
+    #NTNotesName {
+        font-size: 16px;
+        margin-left: 5px;
+        padding-left: 5px;
+    }
+
+    #closeNewNote svg,
+    #closeNote svg {
+        height: 24px;
+    }
+
+    #noteNameInput {
+        font-size: 16px;
+        height: 34px;
+    }
+
+    .wordCounter {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .wordBox {
+        margin-left: 15px;
+    }
+
+    .icon svg {
+        height: 18px;
+    }
+
+    #newNoteInput {
+        font-size: 16px;
+    }
+
+    #notificationBox {
+        width: 320px;
+    }
+
+    #NPNoteName {
+        margin-left: 10px;
+        min-width: 220px;
+        max-width: 220px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #NTLeftSide {
+        max-width: 65%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .appLogo img {
+        height: 30px;
+    }
+
+    #userInfo {
+        height: 30px;
+        width: 30px;
+    }
+
+    #appName {
+        margin-left: 5px;
+    }
+
+    #innerContFooter p {
+        font-size: 13px;
+    }
+
+    #notificationBox {
+        width: 280px;
+        height: 60px;
+    }
+}

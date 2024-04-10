@@ -1,0 +1,87 @@
+#Login {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginCont {
+    height: 340px;
+    width: 380px;
+    background: linear-gradient(45deg, lightblue, lightpink);
+    border-radius: 10px;
+}
+
+.loginCont .header {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.loginCont .header h1 {
+    margin-left: 10px;
+    font-size: 26px;
+}
+
+.appLogo {
+    margin: 0;
+    margin-left: 15px;
+}
+
+.loginCont .body {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginCont .body button {
+    height: 50px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    transition: transform ease 200ms;
+}
+
+.loginCont .body button svg {
+    height: 20px;
+    margin: 0 5px;
+}
+
+.loginCont .body button:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.loginCont .body button:active {
+    transform: scale(0.9);
+}
+
+@media screen and (max-width: 375px) {
+
+    .loginCont {
+        width: 300px;
+        height: 300px;
+    }
+
+    .loginCont .header h1 {
+        font-size: 20px;
+    }
+
+    .loginCont .body button {
+        font-size: 18px;
+    }
+
+    .loginCont .body button svg {
+        height: 18px;
+    }
+}
